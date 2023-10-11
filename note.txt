@@ -1,0 +1,1 @@
+1) Reshufle random feature if 30 seconds have elapsed and then display it again
