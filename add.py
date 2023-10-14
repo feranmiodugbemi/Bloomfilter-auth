@@ -1,15 +1,15 @@
-from pybloom_live import BloomFilter
+from pybloom_live import ScalableBloomFilter
 
-Vehicle_Registration_NumberBF = BloomFilter(capacity=10000, error_rate=0.001)
-Vehicle_Identification_NumberBF = BloomFilter(capacity=10000, error_rate=0.001)
-License_Plate_NumberBF = BloomFilter(capacity=10000, error_rate=0.001)
-Engine_Serial_NumberBF = BloomFilter(capacity=10000, error_rate=0.001)
-Tire_SizeBF = BloomFilter(capacity=10000, error_rate=0.001)
-Vehicle_ClassBF = BloomFilter(capacity=10000, error_rate=0.001)
-Transmission_Serial_NumberBF = BloomFilter(capacity=10000, error_rate=0.001)
-Vehicle_WeightBF = BloomFilter(capacity=10000, error_rate=0.001)
-Axle_RatioBF = BloomFilter(capacity=10000, error_rate=0.001)
-Vehicle_Odometer_ReadingBF = BloomFilter(capacity=10000, error_rate=0.001)
+Vehicle_Registration_NumberBF = ScalableBloomFilter()
+Vehicle_Identification_NumberBF = ScalableBloomFilter()
+License_Plate_NumberBF = ScalableBloomFilter()
+Engine_Serial_NumberBF = ScalableBloomFilter()
+Tire_SizeBF = ScalableBloomFilter()
+Vehicle_ClassBF = ScalableBloomFilter()
+Transmission_Serial_NumberBF = ScalableBloomFilter()
+Vehicle_WeightBF = ScalableBloomFilter()
+Axle_RatioBF = ScalableBloomFilter()
+Vehicle_Odometer_ReadingBF = ScalableBloomFilter()
 
 # Define your cars
 car1 = {
@@ -68,13 +68,13 @@ for car in [car1, car2, car3]:
 
 
 # Save Bloom filters to .blm files
-Vehicle_Registration_NumberBF.tofile(open('Vehicle_Registration_NumberBF.blm', 'wb'))
-Vehicle_Identification_NumberBF.tofile(open('Vehicle_Identification_NumberBF.blm', 'wb'))
-License_Plate_NumberBF.tofile(open('License_Plate_NumberBF.blm', 'wb'))
-Engine_Serial_NumberBF.tofile(open('Engine_Serial_NumberBF.blm', 'wb'))
-Tire_SizeBF.tofile(open('Tire_SizeBF.blm', 'wb'))
-Vehicle_ClassBF.tofile(open('Vehicle_ClassBF.blm', 'wb'))
-Transmission_Serial_NumberBF.tofile(open('Transmission_Serial_NumberBF.blm', 'wb'))
-Vehicle_WeightBF.tofile(open('Vehicle_WeightBF.blm', 'wb'))
-Axle_RatioBF.tofile(open('Axle_RatioBF.blm', 'wb'))
-Vehicle_Odometer_ReadingBF.tofile(open('Vehicle_Odometer_ReadingBF.blm', 'wb'))
+Vehicle_Registration_NumberBF.tofile(open('bloom-filter/Vehicle_Registration_NumberBF.blm', 'wb'))
+Vehicle_Identification_NumberBF.tofile(open('bloom-filter/Vehicle_Identification_NumberBF.blm', 'wb'))
+License_Plate_NumberBF.tofile(open('bloom-filter/License_Plate_NumberBF.blm', 'wb'))
+Engine_Serial_NumberBF.tofile(open('bloom-filter/Engine_Serial_NumberBF.blm', 'wb'))
+Tire_SizeBF.tofile(open('bloom-filter/Tire_SizeBF.blm', 'wb'))
+Vehicle_ClassBF.tofile(open('bloom-filter/Vehicle_ClassBF.blm', 'wb'))
+Transmission_Serial_NumberBF.tofile(open('bloom-filter/Transmission_Serial_NumberBF.blm', 'wb'))
+Vehicle_WeightBF.tofile(open('bloom-filter/Vehicle_WeightBF.blm', 'wb'))
+Axle_RatioBF.tofile(open('bloom-filter/Axle_RatioBF.blm', 'wb'))
+Vehicle_Odometer_ReadingBF.tofile(open('bloom-filter/Vehicle_Odometer_ReadingBF.blm', 'wb'))
